@@ -67,9 +67,7 @@ if(!isset($unread)) { $unread = $this->privatum->numUnreadPM($this->user->id); }
 	</script>
 	<!-- END BuySellAds.com Ad Code -->
 	<div id="loader" class="round-10" style="display:none">Loading</div>
-	<div style="width: 100%; background: #000; background-color:rgba(0, 0, 0, 0.8); color: #fff; position: fixed; top: 0; z-index:9001">
-		<div style="width: 700px;margin:0 auto;padding: 40px 10px;text-align:center;">This is the <strong>archive</strong> of the old Colorless! You cannot interact with it, <strong>read-only</strong>. <a href="http://thecolorless.net"style="color: #EA3638" >Go to the main site &rarr;</a></div>
-	</div>
+	
 	<div id="wrapper">
 		<div id="header">
 			<div id="members-counter" class="right">
