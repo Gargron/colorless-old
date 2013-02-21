@@ -1,0 +1,23 @@
+<div class="threads-list">
+    <?php //if($this->session->userdata('userID') == "1"): ?>
+    <?php foreach($posts as $post) { ?>
+    <dl class="thread-item <?php echo $post->threadRole; ?>" id="thread<?php echo $post->threadID; ?>">
+	<dd class="thread-item-meta"><?php $brd = $this->chan->slugBoard($post->threadBoard); echo anchor('board/'.$brd, $brd, array('class'=>'thread-item-meta-board')); ?><br /><span class="thread-item-meta-count"><?php echo $post->threadItems; ?></span></dd>
+	<dt class="thread-item-title">
+	    <strong><?php echo anchor('thread/'.$post->threadID, strip_tags($post->threadTitle)); ?></strong>
+	    <span>By <?php echo anchor('user/'.$post->threadCreatorUserName, $post->threadCreatorUserName); ?>, <?php $ago = timespan(human_to_unix($post->threadCreatedAt)); $ago = explode(',', $ago); echo $ago[0]; ?> ago</span>
+	</dt>
+	<dd class="thread-item-last"><?php $ago = timespan(human_to_unix($post->threadUpdatedAt)); $ago = explode(',', $ago); echo anchor('thread/'.$post->threadID.$this->chan->getLastPage($post->threadItems).'#p'.$post->threadLastEntry, 'Last: '.$post->threadUpdaterUserName.'<br />'.$ago[0].' ago'); ?></dd>
+    </dl>
+    <?php } ?>
+    <?php /*else: ?>
+    <?php foreach($posts as $post) { ?>
+    <dl class="thread <?php echo $post->threadRole; ?>" id="thread<?php echo $post->threadID; ?>">
+        <dd class="last-post"><?php echo anchor('thread/'.$post->threadID.$this->chan->getLastPage($post->threadItems).'#p'.$post->threadLastEntry, 'Last post'); ?> by <?php echo $post->threadUpdaterUserName; ?><br /><?php $ago = timespan(human_to_unix($post->threadUpdatedAt)); $ago = explode(',', $ago); echo $ago[0]; ?> ago</dd>
+        <dd class="items"><?php echo $post->threadItems; ?>P</dd>
+        <dt class="thread-title"><?php echo anchor('thread/'.$post->threadID, $post->threadTitle); ?></dt>
+        <dd class="thread-meta">By <?php echo anchor('user/'.$post->threadCreatorUserName, $post->threadCreatorUserName); ?>, <?php $ago = timespan(human_to_unix($post->threadCreatedAt)); $ago = explode(',', $ago); echo $ago[0]; ?> ago in <?php echo $this->chan->slugBoard($post->threadBoard); ?></dd>
+    </dl>
+    <?php } ?>
+    <?php endif;*/ ?>
+</div>

@@ -1,0 +1,24 @@
+/* TEAM */
+	Founder: Eugen Rochko
+	Contact: admin [at] thecolorless.net
+	Twitter: @Gargron
+	From: Germany
+
+	Co-founder: Ryan Altman
+	Twitter: @6ry
+	From: USA
+
+	Head Developer: Henrique Ferreira
+	Twitter: @glassx
+	From: Brazilia
+
+	Graphic Designer/Badges: Cyrus Lee
+	Contact: cyrus-lee [at] hotmail.com
+	From: United Kingdom
+
+/* SITE */
+	Last update: 2011/02/02
+	Language: English
+	Doctype: HTML5 with CSS3
+	Tools: PHP
+	IDE: Komodo Edit 6.0

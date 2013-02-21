@@ -1,0 +1,5 @@
+uploads/
+cache/
+.DS_Store
+database.php
+config.php

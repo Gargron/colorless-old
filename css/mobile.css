@@ -1,0 +1,254 @@
+body {
+    background: #222223 url('/images/cl_cont_bg.jpg');
+    color: #fff;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 120%;
+    text-shadow: #000 1px 1px 1px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+p, ul, ol, blockquote, pre {
+    margin-bottom: 10px;
+}
+
+#wrapper, #subhdr {
+    width: auto;
+}
+
+#header, #subhdr-nav-container, #primary-aside, #site-info {
+    display: none;
+}
+
+#subhdr-logo {
+    background: #333 url('/images/cl_subhdr_subnav.png') repeat-x top;
+    width: auto;
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #111;
+}
+
+#subhdr-logo h1 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+#subhdr-logo h1 a strong {
+    color: #aaa;
+}
+
+#subhdr-logo h1 a em {
+    font-style: normal;
+}
+
+.dash-head {
+    text-transform: uppercase;
+    font-size: 80%;
+    padding: 0 5px;
+    color: #aaa;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+#content {
+    width: auto;
+    overflow: hidden;
+}
+
+.thread-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.thread-item-meta, .thread-item-last {
+    display: none;
+}
+
+.thread-item-title strong a {
+    font-size: 110%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.pagination {
+    margin: 20px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.pagination a, .pagination strong {
+    display: block;
+    float: left;
+    text-align: center;
+    margin: 5px;
+    padding: 4px;
+    background: #111;
+    text-decoration: none;
+    font-size: 110%;
+}
+
+form {
+    background: #111;
+    padding: 20px 5px;
+    color: #aaa;
+    font-size: 90%;
+}
+
+.upload, .preview {
+    display: none;
+}
+
+#footer {
+    margin-top: 20px;
+    background: #111;
+    border-top: 1px solid #2d2d2d;
+    padding: 20px 5px;
+    color: #aaa;
+    font-size: 80%;
+}
+
+#footer p {
+    display: none;
+}
+
+#back-to-top-master {
+    display: none;
+}
+
+.entry-content {
+    padding: 0 5px;
+}
+
+.entry-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 1px solid #111;
+}
+
+.entry-author {
+    padding: 5px;
+    margin: 20px 0;
+    background: #111;
+}
+
+.entry-author-username {
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 110%;
+    vertical-align: middle;
+}
+
+.entry-author-avatar {
+    vertical-align: middle;
+    border: 1px solid #111;
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+}
+
+.my-pagination {
+    display: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.inline-dropdown {
+    clear: right;
+}
+
+.entry-meta {
+    display: none;
+}
+
+fieldet {
+    padding: 10px 0;
+}
+
+form legend {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+input, textarea, select {
+    background: #ededed url('/images/input-bg.png') repeat-x top;
+    color: #333;
+    border: 1px solid #000;
+    border-color: #000;
+    padding: 4px;
+    font-family: inherit;
+}
+
+button {
+    display: inline-block;
+    background: #0d0d0d;
+    padding: 1px;
+    padding-bottom: 0;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+}
+
+button span {
+    display: block;
+    background: #333 url('/images/cl_button_grad.png') repeat-x top;
+    border: 1px solid #555;
+    border-bottom-color: #000;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+button:hover span, button:focus span {
+    background-color: #424441;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+blockquote, pre {
+    background: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+pre, code, textarea {
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace;
+}
+
+textarea {
+    width: 98%;
+}
+
+pre {
+    width: 354px;
+    overflow-x: auto;
+}

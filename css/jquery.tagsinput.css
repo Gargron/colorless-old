@@ -1,0 +1,22 @@
+div.tagsinput {
+    background: #ededed url('/images/input-bg.png') repeat-x top;
+    color: #333;
+    border: 1px solid #000;
+    border-color: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: #fff 0px 1px 1px;
+    font-family: inherit;
+    border:1px solid #CCC;
+    padding:2px 5px;
+    width:98%;
+    margin-bottom: 10px;
+    height: 25px;
+    overflow-y: auto;
+}
+div.tagsinput span.tag { border: 1px solid #a4b87d; -moz-border-radius:2px; -webkit-border-radius:2px; display: block; float: left; padding: 2px 5px; text-decoration:none; background: #d2dcbf; color: #5f703d; margin-right: 5px; margin-bottom:2px;font-family: helvetica;  font-size:13px;}
+div.tagsinput span.tag a { font-weight: bold; color: #82ad2b; text-decoration:none; font-size: 11px;  }
+div.tagsinput input { width:150px; margin:0px; font-family: helvetica; font-size: 13px; border:1px solid transparent; padding:2px 5px; background: transparent; color: #000; outline:0px;  margin-right:5px; margin-bottom:2px; }
+div.tagsinput div { display:block; float: left; }
+.tags_clear { clear: both; width: 100%; height: 0px; }

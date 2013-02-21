@@ -1,0 +1,535 @@
+@import url('reset.css');
+
+body {
+    background: #111112;
+    color: #fff;
+    line-height: 24px;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+#player {
+    position: fixed;
+    opacity: 0.7;
+    bottom: 10px;
+    right: 20px;
+    z-index: 109;
+}
+
+#player:hover {
+    opacity: 1;
+}
+
+.colorfcfbd1 {
+    color: #000;
+}
+
+/*div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-left: 0;
+}
+
+div::-webkit-scrollbar-button:start:decrement {
+    display: block;
+    height: 5px;
+}
+
+div::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 5px;
+}
+
+div::-webkit-scrollbar-button:vertical:increment {
+    background-color: transparent;
+}
+
+div::-webkit-scrollbar-track:enabled {
+    background-color: rgba(255,255,255,0.1);
+    -webkit-border-radius: 5px;
+}
+div::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-border-radius: 5px;
+}
+
+div::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-border-radius: 5px;
+}*/
+
+#wrapper {
+    position: relative;
+}
+
+#header {
+    background: #ededed url("http://imgur.com/qtcJp.jpg") no-repeat top center;
+    width: 100%;
+    height: 107px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 5px 0;
+    text-shadow:#fff 0px 1px 1px;
+}
+
+#name-area {
+    overflow: visible;
+    clear: both;
+    height: 24px;
+    position: relative;
+}
+
+#header a {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    color: #666;
+    text-decoration: underline;
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+#send-message-area {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #555;
+    position: relative;
+}
+
+#sendie {
+    background: #fff;
+    border: 3px solid #5a5a5a;
+    color: #5a5a5a;
+    width: 389px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Helvetia, Arial, sans-serif;
+    padding: 5px;
+    padding-right: 40px;
+}
+
+#characters-left {
+    position: absolute;
+    color: #555;
+    color: rgba(0, 0, 0, 0.5);
+    right: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Helvetia, Arial, sans-serif;
+    top: 35px;
+}
+
+#new-msg-post {
+    border: 3px solid #5a5a5a;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: #5a5a5a;
+    background: #fff url(/images/grad-1.png) repeat-x top left;
+    background-position: 0 52%;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 5px 100px;
+}
+
+#content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#chat-wrap {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+    background: #111112;
+    z-index: 100;
+    margin: 137px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+#chat-area {
+    width: 400px;
+    overflow: visible;
+    margin: 0 auto;
+    z-index: 100;
+    padding: 0;
+}
+
+.message, .status {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.message {
+    background: url(/images/tri-bg.png) no-repeat top left;
+    background-position: 83px 33px;
+    overflow: hidden;
+    width: 400px;
+    padding-top: 10px;
+    z-index: 3;
+}
+
+.status { margin-bottom: 20px }
+
+.user {
+    width: 64px;
+    line-height: 18px;
+    float: left;
+    clear: left;
+}
+
+.avatar {
+    border: 2px solid #fff;
+    display: block;
+    background: #555;
+}
+
+.username {
+    display: block;
+    text-align: center;
+    position: relative;
+    color: #fff!important;
+    text-decoration: none;
+}
+
+.inline-username {
+    color: #fff;
+    text-decoration: none;
+}
+
+.message .blurb {
+    display: block;
+    margin-left: 40px;
+    margin-right: 0;
+    background-color: #222223;
+    background-image: url(/images/grad-2.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    position: relative;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    float: left;
+    min-height: 24px;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+    max-width: 246px;
+    padding: 20px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+    word-wrap: break-word;
+}
+
+.message .blurb:after {
+    content: "\00a0";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 28px;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-color: transparent #222223 transparent transparent;
+    border-style: solid;
+    border-width: 5px 15px;
+}
+
+.message .blurb a { color: #00aeff }
+
+.orange .blurb { background-color: #d58f19 }
+
+.orange .blurb:after { border-color: transparent #d58f19 transparent transparent }
+
+.darkblue .blurb { background-color: #3c629b }
+
+.darkblue .blurb:after { border-color: transparent #3c629b transparent transparent }
+
+.orange a, .blue a { color: #004c70 }
+
+.blue .blurb { background-color: #5d9dc2 }
+
+.blue .blurb:after { border-color: transparent #5d9dc2 transparent transparent }
+
+.red .blurb { background-color: #920003 }
+
+.red .blurb:after { border-color: transparent #920003 transparent transparent }
+
+.red a, .magenta a, .green a { color: #83c4e2 }
+
+.magenta .blurb { background-color: #95005c }
+
+.magenta .blurb:after { border-color: transparent #95005c transparent transparent }
+
+.green .blurb { background-color: #1d8140 }
+
+.green .blurb:after { border-color: transparent #1d8140 transparent transparent }
+
+.grey .blurb { background-color: #717171 }
+
+.grey .blurb:after { border-color: transparent #717171 transparent transparent }
+
+.mud_green .blurb { background-color: #777137 }
+
+.mud_green .blurb:after { border-color: transparent #777137 transparent transparent }
+
+.purple .blurb { background-color: #3c1773 }
+
+.purple .blurb:after { border-color: transparent #3c1773 transparent transparent }
+
+.lime_green .blurb { background-color: #5ab800 }
+
+.lime_green .blurb:after { border-color: transparent #5ab800 transparent transparent }
+
+.is_reply .blurb {
+    -webkit-box-shadow: 0px 0px 10px #ebebeb;
+    -moz-box-shadow: 0px 0px 10px #ebebeb;
+    box-shadow: 0px 0px 10px #ebebeb;
+}
+
+#notice {
+    background: #2b2b2b;
+    overflow: auto;
+}
+
+#notice #wrapper {
+    width: 1045px;
+    margin: 0 auto;
+}
+
+#notice #content {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    text-shadow:#000 0px -1px 1px;
+}
+
+#notice h2 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, 'Helvetica Neue', Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+#notice p {
+    font-size: 15px;
+    max-width: 400px;
+}
+
+#go-away {
+    position: absolute;
+    top: 24px;
+    right: 130px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #111112;
+    text-align: center;
+    color: #999;
+    font-size: 9px;
+    text-transform: uppercase;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+#footer a { color: #bbb }
+
+#whois-online {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    z-index: 200;
+    padding: 20px;
+    width: 300px;
+}
+
+#whois-online-container {
+    width: 260px;
+    text-shadow: #000 0px 1px 1px;
+    background: #111112;
+    border: 1px solid #222223;
+    padding: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px #000000;
+    -moz-box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 20px #000000;
+}
+
+#close-whois-online {
+    color: #cb0419;
+}
+
+#whois-online a, #online-list a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+#whois-online a:hover, #online-list a:hover {
+    text-decoration: underline;
+}
+
+#whois-online .inline-username, #online-list .inline-username {
+    color: #fff;
+}
+
+#whois-online .inline-username:hover, #online-list .inline-username:hover {
+    text-decoration: underline;
+}
+
+.timestamp, #color-change { display: none }
+
+#color-select {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    background: #555556;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 113px;
+    overflow: hidden;
+}
+
+#color-select li {
+    padding: 0 5px;
+    display: none;
+    background: #555556;
+    text-align: left;
+}
+
+#color-select li:last-child {
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#color-select:hover li {
+    display: block;
+}
+
+#color-select li:hover {
+    background-color: #666667;
+}
+
+#color-select #active-color {
+    display: block;
+    padding-right: 20px;
+    background: url("http://imgur.com/EcmWl.png") no-repeat center right;
+}
+
+#active-color span {
+    font-weight: bold;
+}
+
+#home-link {
+    margin-left: 98px;
+}
+
+.button {
+   border-top: 1px solid #707070;
+   background: #000000;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4f4f4f), to(#000000));
+   background: -moz-linear-gradient(top, #4f4f4f, #000000);
+   padding: 7.5px 15px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #1a1a1a;
+   background: #1a1a1a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #000000;
+   background: #000000;
+   }
+
+   #awesome-plug {
+    position: fixed;
+    top: 180px;
+    left: 50px;
+    width: 150px;
+    z-index: 2;
+    opacity: 0.8;
+   }
+
+   #awesome-plug:hover {
+    opacity: 1;
+   }
+
+   #awesome-plug h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+   }
+
+   #awesome-plug a img {
+    display: block;
+    margin: 20px auto;
+   }
+
+   #awesome-plug p {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+   }
